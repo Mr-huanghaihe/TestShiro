@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.baizhi.dao.ArticleDao">
+    <sql id="articleField">
+        id,title,picture,content,up_date,guruId,status
+    </sql>
+    <insert id="add">
+        insert into article values(#{id},#{title},#{picture},#{content},#{up_date},#{guruId},#{status})
+    </insert>
+    <select id="selectByPage" resultType="article">
+        select <include refid="articleField"/> from article limit #{start},#{rows}
+    </select>
+    <select id="selectCounts" resultType="Integer">
+        select count(*) from article
+    </select>
+    <update id="update">
+        update article
+        <set>
+            <if test="title!=null">title=#{title},</if>
+            <if test="picture!=null">picture=#{picture},</if>
+            <if test="content!=null">content=#{content},</if>
+            <if test="up_date!=null">up_date=#{up_date},</if>
+            <if test="guruId!=null">guruId=#{guruId},</if>
+            <if test="status!=null">status=#{status},</if>
+        </set>
+        where id=#{id}
+    </update>
+    <delete id="delete">
+        delete from article where id=#{id}
+    </delete>
+</mapper>

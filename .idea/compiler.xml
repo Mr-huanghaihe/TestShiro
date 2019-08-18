@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cmfz_hhh" />
+        <module name="cmfz_huanghh" />
+        <module name="cmfz_test" />
+        <module name="eureka-client" />
+        <module name="eureka-client1" />
+        <module name="eureka-client2" />
+        <module name="eureka-feign" />
+        <module name="eureka-server" />
+        <module name="TestShiro" />
+        <module name="TestThread" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cmfz_hhh" target="1.8" />
+      <module name="cmfz_huanghh" target="1.8" />
+      <module name="cmfz_test" target="1.8" />
+      <module name="DangDang_huanghh" target="1.6" />
+      <module name="eureka-client" target="1.8" />
+      <module name="eureka-client1" target="1.8" />
+      <module name="eureka-client2" target="1.8" />
+      <module name="eureka-feign" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="eurka-server" target="1.8" />
+      <module name="TestShiro" target="1.8" />
+      <module name="TestThread" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

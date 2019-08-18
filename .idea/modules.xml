@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TestShiro/TestShiro.iml" filepath="$PROJECT_DIR$/TestShiro/TestShiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestThread/TestThread.iml" filepath="$PROJECT_DIR$/TestThread/TestThread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmfz_hhh/cmfz_hhh.iml" filepath="$PROJECT_DIR$/cmfz_hhh/cmfz_hhh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmfz_huanghh/cmfz_huanghh.iml" filepath="$PROJECT_DIR$/cmfz_huanghh/cmfz_huanghh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmfz_test/cmfz_test.iml" filepath="$PROJECT_DIR$/cmfz_test/cmfz_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/eureka-client/eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-client1/eureka-client1.iml" filepath="$PROJECT_DIR$/eureka-client1/eureka-client1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-client2/eureka-client2.iml" filepath="$PROJECT_DIR$/eureka-client2/eureka-client2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-feign/eureka-feign.iml" filepath="$PROJECT_DIR$/eureka-feign/eureka-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+    </modules>
+  </component>
+</project>

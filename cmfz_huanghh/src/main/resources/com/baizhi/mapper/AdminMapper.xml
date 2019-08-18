@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.baizhi.dao.AdminDao">
+
+    <select id="selectByname" resultType="Admin">
+        select admin_id,username,password,salt from s_admin where username=#{username}
+    </select>
+
+    <resultMap id="queryMap" type="Admin">
+        <id column="aadminId" property="admin_id" />
+        <result column="ausername" property="username"  />
+        <result column="apassword" property="password"  />
+        <result column="asalt" property="salt"  />
+        <collection property="roles" javaType="list" ofType="Role">
+            <id column="roleId" property="role_id"  />
+            <result column="roleName" property="role_name" />
+            <collection property="authorities" javaType="list" ofType="Authority">
+                <id column="authorityId" property="authority_id" />
+                <result column="authorityName" property="authority_name" />
+            </collection>
+        </collection>
+    </resultMap>
+    <select id="queryShiroByName" resultMap="queryMap">
+        select a.admin_id aadminId,a.username ausername,a.password apassword,a.salt asalt,
+               r.role_id roleId,r.role_name roleName,
+               au.authority_id authorityId,au.authority_name authorityName
+        from s_admin a
+        left join s_admin_role ar on a.admin_id=ar.admin_id
+        left join s_role r on ar.role_id=r.role_id
+        left join s_role_authority ra on r.role_id=ra.role_id
+        left join s_authority au on ra.authority_id=au.authority_id
+        where username=#{username}
+    </select>
+
+</mapper>

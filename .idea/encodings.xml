@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://E:/DangDang_huanghh" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TestShiro" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TestThread" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmfz_hhh" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmfz_huanghh" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmfz_test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-client1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-client2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
+  </component>
+</project>

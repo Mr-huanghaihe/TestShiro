@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.baizhi.dao.UserDao">
+    <sql id="userField">
+        id,name,ahama,phone,password,salt,photo,sex,city,sign,status,reg_date,guruId
+    </sql>
+    <insert id="add">
+        insert into user values(#{id},#{name},#{ahama},#{phone},#{password},#{salt},#{photo},#{sex},#{city},#{sign},#{status},#{reg_date},#{guruId})
+    </insert>
+    <select id="selectOneUser" resultType="User">
+        select <include refid="userField"/> from user where id=#{id}
+    </select>
+    <select id="selectAll" resultType="User">
+        select <include refid="userField"/> from user
+    </select>
+    <select id="selectByPage" resultType="User">
+        select <include refid="userField"/> from user limit #{start},#{rows}
+    </select>
+    <select id="selectCounts" resultType="Integer">
+        select count(*) from user
+    </select>
+    <update id="update">
+        update user
+        <set>
+            <if test="name!=null">name=#{name},</if>
+            <if test="ahama!=null">ahama=#{ahama},</if>
+            <if test="phone!=null">phone=#{phone},</if>
+            <if test="password!=null">password=#{password},</if>
+            <if test="salt!=null">salt=#{salt},</if>
+            <if test="photo!=null">photo=#{photo},</if>
+            <if test="sex!=null">sex=#{sex},</if>
+            <if test="city!=null">city=#{city},</if>
+            <if test="sign!=null">sign=#{sign},</if>
+            <if test="status!=null">status=#{status},</if>
+            <if test="reg_date!=null">reg_date=#{reg_date},</if>
+            <if test="guruId!=null">guruId=#{guruId},</if>
+        </set>
+        where id=#{id}
+    </update>
+    <select id="selectMan" resultType="User">
+        select <include refid="userField"/> from user where sex='男'
+    </select>
+    <select id="selectWoMan" resultType="User">
+        select <include refid="userField"/> from user where sex='女'
+    </select>
+    <select id="selectManGroupByCity" resultType="City">
+        select city as name,count(*) as value from user where sex='男' group by city
+    </select>
+    <select id="selectWomanGroupByCity" resultType="City">
+        select city as name,count(*) as value from user where sex='女' group by city
+    </select>
+</mapper>
